@@ -1,19 +1,28 @@
-/* Diagnosis Screen Styles */
+/* Base styles for desktop (1024px and above) */
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  /* padding: 0 2rem; */
+}
+
 .camera-container {
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .camera-frame {
-  width: 100%;
+  width: 600px;
   aspect-ratio: 1;
   background-color: #000;
   border-radius: 15px;
   position: relative;
   overflow: hidden;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .camera-frame p {
@@ -24,6 +33,7 @@
   color: var(--white);
   text-align: center;
   z-index: 1;
+  font-size: 1.2rem;
 }
 
 .camera-overlay {
@@ -45,37 +55,37 @@
 
 .corner {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-color: var(--white);
 }
 
 .top-left {
-  top: 20px;
-  left: 20px;
-  border-top: 3px solid;
-  border-left: 3px solid;
+  top: 30px;
+  left: 30px;
+  border-top: 4px solid;
+  border-left: 4px solid;
 }
 
 .top-right {
-  top: 20px;
-  right: 20px;
-  border-top: 3px solid;
-  border-right: 3px solid;
+  top: 30px;
+  right: 30px;
+  border-top: 4px solid;
+  border-right: 4px solid;
 }
 
 .bottom-left {
-  bottom: 20px;
-  left: 20px;
-  border-bottom: 3px solid;
-  border-left: 3px solid;
+  bottom: 30px;
+  left: 30px;
+  border-bottom: 4px solid;
+  border-left: 4px solid;
 }
 
 .bottom-right {
-  bottom: 20px;
-  right: 20px;
-  border-bottom: 3px solid;
-  border-right: 3px solid;
+  bottom: 30px;
+  right: 30px;
+  border-bottom: 4px solid;
+  border-right: 4px solid;
 }
 
 #camera-preview {
@@ -89,6 +99,65 @@
 }
 
 .diagnose-btn {
-  width: 80%;
+  width: 300px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* Tablet styles */
+@media screen and (max-width: 1023px) {
+  .camera-container {
+    padding: 1.5rem;
+  }
+
+  .camera-frame {
+    width: 500px;
+  }
+
+  .corner {
+    width: 35px;
+    height: 35px;
+  }
+
+  .diagnose-btn {
+    width: 250px;
+    margin-bottom: 6rem;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 767px) {
+  .app-container {
+    padding: 0 1rem;
+  }
+
+  .camera-container {
+    padding: 1rem;
+  }
+
+  .camera-frame {
+    width: 100%;
+  }
+
+  .corner {
+    width: 30px;
+    height: 30px;
+  }
+
+  .top-left,
+  .top-right,
+  .bottom-left,
+  .bottom-right {
+    border-width: 3px;
+  }
+
+  .diagnose-btn {
+    width: 80%;
+  }
+
+  .camera-frame p {
+    font-size: 1rem;
+  }
 }
 

@@ -2,13 +2,17 @@
 .diagnosis-result {
   padding: 1rem;
   margin-bottom: 70px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .diagnosis-section {
   margin-bottom: 1.5rem;
   background-color: var(--background-color);
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .diagnosis-section h4 {
@@ -26,5 +30,39 @@
 
 .diagnosis-section .btn-primary {
   margin-top: 1rem;
+}
+
+/* Media queries for different screen sizes */
+@media screen and (min-width: 768px) {
+  .diagnosis-result {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .diagnosis-section {
+    margin-bottom: 0;
+  }
+
+  /* Make the summary section full width */
+  .diagnosis-section:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .app-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .screen-header {
+    padding: 1.5rem 0;
+  }
+
+  .diagnosis-section {
+    padding: 2rem;
+  }
 }
 

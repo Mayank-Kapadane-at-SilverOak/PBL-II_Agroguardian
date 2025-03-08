@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Farm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background-color: #0a6e31;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-radius: 10px;
+        }
+        
+        .back-btn {
+            color: white;
+            font-size: 24px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        
+        .title {
+            font-size: 24px;
+            text-align: center;
+            flex-grow: 1;
+            margin-left: -24px; /* Offset the back button to center the title */
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 0;
+        }
+        
+        .card-title {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .weather-icon {
+            font-size: 24px;
+            color: #ffcc00;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .cloud-icon {
+            color: #99ccff;
+        }
+        
+        .meter-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .meter {
+            flex-grow: 1;
+            height: 15px;
+            background: linear-gradient(to right, #ff0000, #ffff00, #00ff00);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .meter-marker {
+            position: absolute;
+            width: 3px;
+            height: 20px;
+            background-color: black;
+            top: -2px;
+            z-index: 2;
+        }
+        
+        .alert {
+            color: #ff0000;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        
+        .alert-text {
+            color: black;
+            font-weight: normal;
+        }
+        
+        .weather-data {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+        }
+        
+        .temp-icon {
+            color: #ff9933;
+        }
+        
+        .wind-icon {
+            color: #99ccff;
+        }
+        
+        .weather-value {
+            font-size: 22px;
+            color: #666;
+            margin-left: 15px;
+        }
+        
+        .location-info {
+            text-align: center;
+            margin: 15px;
+            color: #333;
+        }
+        
+        .location-icon {
+            margin-right: 5px;
+        }
+        
+        .soil-param {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .param-name {
+            width: 80px;
+        }
+        
+        .soil-quality {
+            text-align: center;
+            background-color: #e0e0e0;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 10px auto;
+        }
+        
+        .quality-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            margin: 20px 15px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+        }
+        
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+        }
+        
+        .high {
+            background-color: #ff0000;
+        }
+        
+        .medium {
+            background-color: #ffff00;
+        }
+        
+        .low {
+            background-color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="back-btn" >
+            <i class="fas fa-arrow-left" onclick="goBack()"></i>
+        </div>
+        <div class="title">My Farm</div>
+    </div>
+    
+    <div class="grid-container">
+        <div class="card">
+            <div class="card-title">Weather Reports</div>
+            
+            <div class="meter-container">
+                <div class="weather-icon"  onclick=goBack()>
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="meter">
+                    <div class="meter-marker" style="right: 15%;"></div>
+                </div>
+            </div>
+            
+            <div class="meter-container">
+                <div class="weather-icon cloud-icon">
+                    <i class="fas fa-cloud-rain"></i>
+                </div>
+                <div class="meter">
+                    <div class="meter-marker" style="right: 65%;"></div>
+                </div>
+            </div>
+            
+            <div class="alert">
+                Alert: <span class="alert-text">There will be a having rain expected in next two days.</span>
+            </div>
+            
+            <div class="weather-data">
+                <div class="weather-icon temp-icon">
+                    <i class="fas fa-thermometer-half"></i>
+                </div>
+                <div class="weather-value">30°C</div>
+            </div>
+            
+            <div class="weather-data">
+                <div class="weather-icon wind-icon">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <div class="weather-value">4.39 m/s</div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-title">Soil</div>
+            
+            <div class="soil-param">
+                <div class="param-name">pH</div>
+                <div class="meter">
+                    <div class="meter-marker" style="right: 30%;"></div>
+                </div>
+            </div>
+            
+            <div class="soil-param">
+                <div class="param-name">moisture</div>
+                <div class="meter">
+                    <div class="meter-marker" style="right: 20%;"></div>
+                </div>
+            </div>
+            
+            <div class="soil-param">
+                <div class="param-name">Nutrient</div>
+                <div class="meter">
+                    <div class="meter-marker" style="right: 30%;"></div>
+                </div>
+            </div>
+            
+            <div class="quality-container">
+                <div class="soil-quality">Soil Quality : 80%</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="location-info">
+        <i class="fas fa-map-marker-alt location-icon"></i> Gondal, Rajkot
+        <br>
+        Wednesday | Sep 4 | 9:30 AM
+    </div>
+
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-color high"></div>
+            <div>High</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color medium"></div>
+            <div>Medium</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color low"></div>
+            <div>Low</div>
+        </div>
+    </div>
+    
+    <script src="../js/navigation.js"></script>
+    <script>
+        // You can add JavaScript functionality here
+        // For example, to update weather data in real-time
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Example: Update date and time
+            updateDateTime();
+            
+            // You could add code to fetch real weather data from an API
+            // and update the display accordingly
+        });
+        
+        function updateDateTime() {
+            const now = new Date();
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            
+            const day = days[now.getDay()];
+            const month = months[now.getMonth()];
+            const date = now.getDate();
+            
+            let hours = now.getHours();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            
+            const timeString = `${day} | ${month} ${date} | ${hours}:${minutes} ${ampm}`;
+            
+            // If you want to update the time display, uncomment this line and add an element with id="datetime"
+            // document.getElementById('datetime').textContent = timeString;
+        }
+    </script>
+</body>
+</html>

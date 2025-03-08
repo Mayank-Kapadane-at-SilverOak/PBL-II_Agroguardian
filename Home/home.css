@@ -161,3 +161,123 @@
   font-size: 0.8rem;
   color: var(--text-secondary);
 }
+
+/* Add responsive layout adjustments */
+@media screen and (min-width: 768px) {
+  .app-container {
+    max-width: 100%;
+    margin: 0 auto;
+    /* padding: 0 2rem; */
+  }
+
+  .home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .user-greeting {
+    margin-bottom: 0;
+  }
+
+  .weather-card {
+    margin: 2rem auto;
+    max-width: 800px;
+    padding: 2rem;
+  }
+
+  .quick-actions {
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 2rem;
+  }
+
+  .action-card {
+    padding: 1.5rem;
+  }
+
+  .action-icon {
+    font-size: 2rem;
+  }
+
+  .action-title {
+    font-size: 1rem;
+  }
+
+  .crop-list {
+    justify-content: center;
+    padding: 2rem;
+    gap: 30px;
+  }
+
+  .crop-item {
+    min-width: 120px;
+    padding: 1.5rem;
+  }
+
+  .crop-icon {
+    font-size: 3rem;
+  }
+
+  .crop-name {
+    font-size: 1rem;
+  }
+
+  .diagnosis-steps {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    gap: 30px;
+  }
+
+  .step-icon {
+    font-size: 2rem;
+  }
+
+  .step-text {
+    font-size: 1rem;
+  }
+
+  .weather-alert {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+}
+
+/* Additional adjustments for larger screens */
+@media screen and (min-width: 1024px) {
+  .weather-details {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+
+  .quick-actions {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .crop-list {
+    overflow-x: visible;
+    flex-wrap: wrap;
+  }
+
+  .crop-item {
+    flex: 0 0 auto;
+  }
+
+  .bottom-nav {
+    max-width: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px 20px 0 0;
+  }
+}

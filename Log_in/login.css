@@ -1,11 +1,36 @@
-/* Login Screen Styles */
+/* Base styles for desktop first */
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
 .auth-header {
   text-align: center;
-  padding: 2rem 0;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+}
+
+.auth-header .logo h1 {
+  font-size: 2.5rem;
+}
+
+.auth-header .logo h2 {
+  font-size: 2rem;
 }
 
 .auth-form {
-  padding: 0 2rem;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: var(--background-color);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -14,10 +39,10 @@
 
 .form-group input {
   width: 100%;
-  padding: 12px;
+  padding: 15px;
   border: 1px solid var(--divider-color);
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .forgot-password {
@@ -28,6 +53,23 @@
 .forgot-password a {
   color: var(--primary-color);
   text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 15px;
+  font-size: 1.1rem;
+  width: 100%;
+  transition: transform 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-2px);
 }
 
 .auth-divider {
@@ -46,5 +88,64 @@
 .auth-divider span {
   padding: 0 10px;
   color: var(--text-secondary);
+}
+
+/* Tablet adjustments */
+@media screen and (max-width: 1024px) {
+  .app-container {
+    padding: 1.5rem;
+  }
+
+  .auth-form {
+    padding: 2rem;
+    max-width: 400px;
+  }
+
+  .auth-header {
+    padding: 2rem 0;
+  }
+
+  .auth-header .logo h1 {
+    font-size: 2rem;
+  }
+
+  .auth-header .logo h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+  }
+
+  .auth-form {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .auth-header {
+    padding: 1.5rem 0;
+  }
+
+  .form-group input {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .auth-header .logo h1 {
+    font-size: 1.75rem;
+  }
+
+  .auth-header .logo h2 {
+    font-size: 1.5rem;
+  }
 }
 

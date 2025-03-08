@@ -11,13 +11,12 @@ function navigateTo(page) {
 }
 
 function goBack() {
-  const previousPage = sessionStorage.getItem("previousPage")
-  if (previousPage) {
-    navigateTo(previousPage)
-  } else {
+  console.log("go back is called")
+
+
     // Default fallback if no previous page is stored
-    navigateTo("home.html")
-  }
+    navigateTo("../home/home.html")
+  
 }
 
 // Set active navigation item based on current page

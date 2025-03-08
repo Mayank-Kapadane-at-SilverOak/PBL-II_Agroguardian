@@ -1,41 +1,123 @@
-/* Profile Screen Styles */
+/* Base styles for desktop */
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
 .profile-info {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 3rem 2rem;
   background-color: var(--primary-light);
+  border-radius: 0 0 15px 15px;
+  margin-bottom: 2rem;
 }
 
 .profile-name {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .profile-email {
   color: var(--text-secondary);
+  font-size: 1.1rem;
 }
 
 .profile-menu {
-  padding: 1rem;
-  margin-bottom: 70px;
+  max-width: 900px;
+  margin: 0 auto 70px auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
 .menu-item {
   display: flex;
   align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid var(--divider-color);
+  padding: 1.5rem;
+  border: 1px solid var(--divider-color);
+  border-radius: 10px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: var(--background-color);
+}
+
+.menu-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
 }
 
 .menu-item i:first-child {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
   color: var(--primary-color);
-  width: 20px;
+  width: 24px;
   text-align: center;
+  font-size: 1.2rem;
 }
 
 .menu-item span {
   flex: 1;
+  font-size: 1.1rem;
+}
+
+.menu-item i:last-child {
+  color: var(--text-secondary);
+}
+
+/* Tablet styles */
+@media screen and (max-width: 1023px) {
+  .app-container {
+    padding: 0 1.5rem;
+  }
+
+  .profile-menu {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .profile-name {
+    font-size: 1.8rem;
+  }
+
+  .menu-item {
+    padding: 1.2rem;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 767px) {
+  .app-container {
+    padding: 0 1rem;
+  }
+
+  .profile-info {
+    padding: 2rem 1rem;
+  }
+
+  .profile-name {
+    font-size: 1.5rem;
+  }
+
+  .profile-menu {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .menu-item {
+    padding: 1rem;
+  }
+
+  .menu-item i:first-child {
+    margin-right: 1rem;
+    width: 20px;
+    font-size: 1rem;
+  }
+
+  .menu-item span {
+    font-size: 1rem;
+  }
 }
 
