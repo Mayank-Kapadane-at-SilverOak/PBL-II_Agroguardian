@@ -15,7 +15,7 @@ function goBack() {
 
 
     // Default fallback if no previous page is stored
-    navigateTo("../home/home.html")
+    navigateTo("../Home/home.html")
   
 }
 
