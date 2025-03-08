@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary - Agro Guardian</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="order-summary.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="screen-header">
+            <button class="back-button" onclick="goBack()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h3>Order Summary</h3>
+        </div>
+        
+        <div class="order-summary">
+            <div class="delivery-address">
+                <h4>Deliver to:</h4>
+                <div class="address-details">
+                    <div class="address-name">Haresh Patel <span class="address-type">Home</span></div>
+                    <div class="address-line">Dharpur, Nr. Hanuman Temple, Gondal, Rajkot-394302</div>
+                    <div class="address-phone">8765256524</div>
+                </div>
+                <button class="change-btn">Change</button>
+            </div>
+            
+            <div class="order-items" id="cart-items">
+                <!-- Cart items will be loaded dynamically -->
+            </div>
+            
+            <div class="delivery-options">
+                <div class="delivery-option">
+                    <input type="radio" id="express-delivery" name="delivery" checked>
+                    <label for="express-delivery">
+                        <div class="option-name">Express Delivery in 2 days, Fri, 240</div>
+                        <div class="option-price">FREE</div>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="price-details">
+                <h4>Price Details</h4>
+                <div class="price-row">
+                    <span>Price (1 item)</span>
+                    <span id="subtotal">₹3862</span>
+                </div>
+                <div class="price-row">
+                    <span>Discount</span>
+                    <span id="discount">-₹500</span>
+                </div>
+                <div class="price-row">
+                    <span>Delivery Charges</span>
+                    <span><s>₹50</s> FREE Delivery</span>
+                </div>
+                <div class="price-row total">
+                    <span>Total Amount</span>
+                    <span id="total">₹3362</span>
+                </div>
+                <div class="savings">
+                    <span>You will save ₹500 on this order.</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="order-actions">
+            <div class="total-price">
+                <span id="footer-total">₹3362</span>
+            </div>
+            <button class="btn-primary" onclick="placeOrder()">Continue</button>
+        </div>
+    </div>
+
+    <script src="../js/navigation.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../store/store.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            displayCart();
+            
+            // Update footer total
+            const total = document.getElementById('total').textContent;
+            document.getElementById('footer-total').textContent = total;
+        });
+    </script>
+</body>
+</html>
+

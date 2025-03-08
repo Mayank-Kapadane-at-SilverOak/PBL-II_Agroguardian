@@ -1,0 +1,41 @@
+/* Profile Screen Styles */
+.profile-info {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--primary-light);
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.profile-email {
+  color: var(--text-secondary);
+}
+
+.profile-menu {
+  padding: 1rem;
+  margin-bottom: 70px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--divider-color);
+  cursor: pointer;
+}
+
+.menu-item i:first-child {
+  margin-right: 1rem;
+  color: var(--primary-color);
+  width: 20px;
+  text-align: center;
+}
+
+.menu-item span {
+  flex: 1;
+}
+

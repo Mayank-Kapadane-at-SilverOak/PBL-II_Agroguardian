@@ -1,0 +1,30 @@
+/* Diagnosis Result Screen Styles */
+.diagnosis-result {
+  padding: 1rem;
+  margin-bottom: 70px;
+}
+
+.diagnosis-section {
+  margin-bottom: 1.5rem;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.diagnosis-section h4 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.diagnosis-section ul {
+  padding-left: 1.5rem;
+}
+
+.diagnosis-section li {
+  margin-bottom: 0.5rem;
+}
+
+.diagnosis-section .btn-primary {
+  margin-top: 1rem;
+}
+

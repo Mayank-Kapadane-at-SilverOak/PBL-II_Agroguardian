@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Agro Guardian</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="home-header">
+            <div class="user-greeting">
+                <h3>Hii <span id="user-name">user</span>..</h3>
+            </div>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+
+        <div class="weather-card">
+            <div class="weather-info">
+                <div class="temperature">18°C</div>
+                <div class="condition">Cloudy</div>
+            </div>
+            <div class="weather-details">
+                <div class="weather-detail">
+                    <div class="detail-label">Humidity</div>
+                    <div class="detail-value">Good</div>
+                </div>
+                <div class="weather-detail">
+                    <div class="detail-label">Soil Moisture</div>
+                    <div class="detail-value">Good</div>
+                </div>
+                <div class="weather-detail">
+                    <div class="detail-label">Precipitation</div>
+                    <div class="detail-value">Low</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h3>Manage your Field</h3>
+        </div>
+
+        <div class="quick-actions">
+            <div class="action-card" onclick="navigateTo('farm.html')">
+                <div class="action-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <div class="action-title">My Farm</div>
+            </div>
+            <div class="action-card" onclick="navigateTo('../diagnosis/diagnosis.html')">
+                <div class="action-icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <div class="action-title">Quick Diagnosis</div>
+            </div>
+            <div class="action-card" onclick="navigateTo('../store/store.html')">
+                <div class="action-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="action-title">Store</div>
+            </div>
+            <div class="action-card" onclick="navigateTo('../Community/community.html')">
+                <div class="action-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="action-title">Community</div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h3>My Farm</h3>
+        </div>
+
+        <div class="crop-list">
+            <div class="crop-item">
+                <div class="crop-icon">🌾</div>
+                <div class="crop-name">Wheat</div>
+            </div>
+            <div class="crop-item">
+                <div class="crop-icon">🥜</div>
+                <div class="crop-name">Groundnut</div>
+            </div>
+            <div class="crop-item">
+                <div class="crop-icon">🧅</div>
+                <div class="crop-name">Onion</div>
+            </div>
+            <div class="crop-item">
+                <div class="crop-icon">🌿</div>
+                <div class="crop-name">Tobacco</div>
+            </div>
+        </div>
+
+        <div class="diagnosis-steps">
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <div class="step-text">Take a picture</div>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="step-text">See a Diagnosis</div>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-pills"></i>
+                </div>
+                <div class="step-text">Get a medicine</div>
+            </div>
+        </div>
+
+        <div class="weather-alert">
+            <div class="alert-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div class="alert-content">
+                <div class="alert-title">Alert: There will be rain expected in next two days.</div>
+                <div class="alert-details">
+                    <span>30°C</span>
+                    <span>4.39 m/s</span>
+                    <span>Gondal, Rajkot</span>
+                </div>
+                <div class="alert-time"></div>
+            </div>
+        </div><br><br><br>
+
+        <div class="bottom-nav">
+            <div class="nav-item active" data-page="home.html">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </div>
+            <div class="nav-item" data-page="../diagnosis/diagnosis.html">
+                <i class="fas fa-stethoscope"></i>
+                <span>Diagnosis</span>
+            </div>
+            <div class="nav-item" data-page="../store/store.html">
+                <i class="fas fa-store"></i>
+                <span>Store</span>
+            </div>
+            <div class="nav-item" data-page="../profile/profile.html">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </div>
+        </div> 
+    </div>
+
+    <script src="../js/navigation.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="home.js"></script>
+</body>
+
+</html>

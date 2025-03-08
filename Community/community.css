@@ -1,0 +1,85 @@
+/* Community Screen Styles */
+.community-post-form {
+  display: flex;
+  padding: 1rem;
+  background-color: var(--background-color);
+  margin-bottom: 1rem;
+}
+
+.post-input {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 25px;
+  padding: 8px 15px;
+  margin-right: 10px;
+}
+
+.post-input i {
+  color: var(--primary-color);
+  margin-right: 10px;
+}
+
+.post-input input {
+  border: none;
+  flex: 1;
+  outline: none;
+}
+
+.post-button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.community-posts {
+  padding: 0 1rem;
+  margin-bottom: 70px;
+}
+
+.post {
+  background-color: var(--background-color);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.post-user {
+  font-weight: bold;
+}
+
+.post-time {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.post-content {
+  margin-bottom: 1rem;
+}
+
+.post-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+

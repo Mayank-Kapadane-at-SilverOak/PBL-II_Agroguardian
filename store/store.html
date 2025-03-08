@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store - Agro Guardian</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="store.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="screen-header">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search..">
+            </div>
+            <button class="filter-button">
+                Filter by.. <i class="fas fa-filter"></i>
+            </button>
+        </div>
+        
+        <div class="product-list">
+            <div class="product-card" onclick="navigateTo('../Product/product-detail.html')">
+                <div class="product-image">
+                    <img src="/placeholder.svg?height=100&width=100" alt="Captain Jack's Copper Fungicide">
+                </div>
+                <div class="product-info">
+                    <h4>Captain Jack's Copper Fungicide (32 OZ) by Atticus.....</h4>
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="reviews">2,498</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">Rs. 3862</span>
+                        <span class="discount">(18% off)</span>
+                    </div>
+                    <div class="delivery-info">
+                        Free delivery by September 5
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/placeholder.svg?height=100&width=100" alt="Propiconazole">
+                </div>
+                <div class="product-info">
+                    <h4>Propiconazole 14.3 Generic Banner MAXX 1 Quart nuf-010....</h4>
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="reviews">2,498</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">Rs. 12,396</span>
+                        <span class="discount">(10% off)</span>
+                    </div>
+                    <div class="delivery-info">
+                        Free delivery by September 5
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/placeholder.svg?height=100&width=100" alt="Urea Fertilizer">
+                </div>
+                <div class="product-info">
+                    <h4>Urea Fertilizer 46-0-0, High Nitrogen Fertilizer for Plants...</h4>
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="reviews">2,498</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">Rs. 1512</span>
+                    </div>
+                    <div class="delivery-info">
+                        Free delivery by September 5
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/placeholder.svg?height=100&width=100" alt="High-Quality Urea">
+                </div>
+                <div class="product-info">
+                    <h4>High-Quality 46-0-0 Urea Fertilizer 50 Lbs Granular for Crops...</h4>
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="reviews">2,488</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="price">Rs. 7,471</span>
+                        <span class="discount">(5% off)</span>
+                    </div>
+                    <div class="delivery-info">
+                        Free delivery by September 5
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-nav">
+            <div class="nav-item" data-page="../Home/home.html">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </div>
+            <div class="nav-item" data-page="../diagnosis/diagnosis.html">
+                <i class="fas fa-stethoscope"></i>
+                <span>Diagnosis</span>
+            </div>
+            <div class="nav-item active" data-page="store.html">
+                <i class="fas fa-store"></i>
+                <span>Store</span>
+            </div>
+            <div class="nav-item" data-page="../profile/profile.html">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="store.js"></script>
+</body>
+</html>
+

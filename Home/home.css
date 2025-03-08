@@ -1,0 +1,163 @@
+/* Home Screen Styles */
+.home-header {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.user-greeting {
+  margin-bottom: 1rem;
+}
+
+.weather-card {
+  background-color: var(--primary-light);
+  margin: 1rem;
+  border-radius: 15px;
+  padding: 1rem;
+  color: var(--text-color);
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.temperature {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-detail {
+  text-align: center;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.detail-value {
+  font-weight: bold;
+}
+
+.section-title {
+  padding: 0 1rem;
+  margin-top: 1.5rem;
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 1rem;
+}
+
+.action-card {
+  background-color: var(--primary-light);
+  border-radius: 10px;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.action-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.action-title {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.crop-list {
+  display: flex;
+  overflow-x: auto;
+  padding: 1rem;
+  gap: 15px;
+}
+
+.crop-item {
+  min-width: 80px;
+  text-align: center;
+  background-color: var(--primary-light);
+  border-radius: 10px;
+  padding: 1rem 0.5rem;
+}
+
+.crop-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.crop-name {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.diagnosis-steps {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem 1rem;
+  background-color: var(--primary-light);
+  margin: 1.5rem 1rem;
+  border-radius: 15px;
+}
+
+.step {
+  text-align: center;
+}
+
+.step-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.step-text {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.weather-alert {
+  display: flex;
+  background-color: var(--warning-color);
+  margin: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  color: var(--text-color);
+}
+
+.alert-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: var(--white);
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.alert-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.alert-time {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
